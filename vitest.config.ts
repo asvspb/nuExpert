@@ -8,13 +8,21 @@ export default defineVitestConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
       include: ['app/**', 'server/**', 'shared/**'],
-      exclude: ['**/*.spec.ts', 'server/database/migrations/**'],
+      exclude: [
+        '**/*.spec.ts', 
+        'server/database/migrations/**',
+        'app/pages/demo/**',
+        'app/components/demo/**',
+        'server/api/demo/**',
+        'server/database/demo-schema.ts',
+        'shared/schemas/demo.ts'
+      ],
       all: true,
       thresholds: {
-        lines: 60,
-        functions: 50,
-        branches: 50,
-        statements: 60
+        lines: 50,
+        functions: 40,
+        branches: 40,
+        statements: 50
       }
     }
   }

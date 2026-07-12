@@ -15,12 +15,15 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "e2e": "playwright test",
+    "clean:demo": "tsx scripts/clean-demo.ts",
     "validate": "npm run typecheck && npm run lint && npm run lint:deps && npm run test:coverage"
   },
   "dependencies": {
     "@nuxt/ui": "^3.3.7",
     "@pinia/nuxt": "^0.11.3",
     "@tailwindcss/vite": "^4.3.2",
+    "@unovis/ts": "^1.6.7",
+    "@unovis/vue": "^1.6.7",
     "drizzle-orm": "^0.45.2",
     "ioredis": "^5.11.1",
     "nuxt": "^4.4.8",
@@ -49,6 +52,7 @@
     "globals": "^17.7.0",
     "happy-dom": "^20.10.6",
     "playwright": "^1.61.1",
+    "tsx": "^4.23.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.63.0",
     "vitest": "^4.1.10",

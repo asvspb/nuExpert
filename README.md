@@ -8,6 +8,7 @@
 - **End-to-End TypeScript**: Никакого `any`. Zod является единым источником истины (`shared/schemas`).
 - **Собственный Backend (Nitro)**: Никаких внешних FastAPI/Express. Встроенный сервер Nuxt с маршрутами `server/api/`.
 - **Drizzle ORM + PostgreSQL**: Быстрая и безопасная работа с БД (миграции через `drizzle-kit generate/migrate`).
+- **Современный UI**: Tailwind CSS v4 + Nuxt UI v3 (базовая тема в `app.config.ts`).
 - **Жесткий контроль качества**: 
   - Flat ESLint (`eslint.config.js`)
   - `dependency-cruiser` для предотвращения кольцевых зависимостей и изоляции слоев (Фронт не видит Бэк).
@@ -62,7 +63,7 @@ npm run e2e
 2. Создайте Drizzle-схему в `server/database/schema.ts`.
 3. Сгенерируйте и примените миграции (`npx drizzle-kit generate` и `npx drizzle-kit migrate`).
 4. Добавьте API Endpoint в `server/api/`.
-5. Напишите UI в `app/pages/` или `app/components/` с использованием Composition API и `<script setup lang="ts">`.
+5. Напишите UI в `app/pages/` или `app/components/` с использованием Composition API и `<script setup lang="ts">`. Явно отдавайте приоритет Nuxt UI-компонентам (`<UButton>`, `<UInput>` и т.д.) вместо ручной вёрстки Tailwind-классами.
 6. Покройте логику тестами.
 7. Убедитесь, что `npm run validate` проходит без ошибок.
 

@@ -19,7 +19,7 @@
     "validate": "npm run typecheck && npm run lint && npm run lint:deps && npm run test:coverage"
   },
   "dependencies": {
-    "@nuxt/ui": "^3.3.7",
+    "@nuxt/ui": "^4.10.0",
     "@pinia/nuxt": "^0.11.3",
     "@tailwindcss/vite": "^4.3.2",
     "@unovis/ts": "^1.6.7",
